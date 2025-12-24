@@ -1,0 +1,19 @@
+#!/bin/bash
+export PATH=/opt/nodejs/bin:$PATH
+
+# 检查是否为生产环境
+if [ -f "package.json" ]; then
+    # 安装依赖
+    if [ ! -d "node_modules" ]; then
+        echo "Installing dependencies..."
+        npm install --production
+    fi
+    
+    # 构建项目
+    echo "Building project..."
+    npm run build
+fi
+
+# 启动HTTP服务器
+echo "Starting server on port 9000..."
+node server.js
