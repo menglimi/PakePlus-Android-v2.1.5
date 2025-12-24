@@ -1,0 +1,7 @@
+{
+  "name": "MingHui Real Estate Pro",
+  "description": "A professional real estate marketing and management system with local file storage and AI rewrite capabilities.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
